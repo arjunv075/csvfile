@@ -1,0 +1,31 @@
+> Script Specification
+
+> Purpose
+This python code generates VCF files from a CSV file containing details.
+
+> Input
+- CSV file: "names.csv"
+  - Format: Each row represents a person's information - first name, last name, title, email, and phone.
+
+> Output
+- VCF files are generated for each person in the CSV.
+- Output directory: "/home/arjun/gensheet/vcf_files"
+
+> VCard Format
+- Version: 2.1
+- Fields:
+  - Name (N): Last Name; First Name
+  - Full Name (FN): First Name Last Name
+  - Organization (ORG): Authors, Inc.
+  - Title (TITLE): Job Title
+  - Work Phone (TEL;WORK;VOICE): Phone Number
+  - Work Address (ADR;WORK): 100 Flat Grape Dr., Fresno, CA 95555, United States of America
+  - Email (EMAIL;PREF;INTERNET): Preferred Email Address
+
+> Execution
+1. Reads data from "names.csv".
+2. Generates a VCard for each person.
+3. Writes VCF files to the output directory.
+
+> File Naming
+- Each VCF file is named in lower case of email.
