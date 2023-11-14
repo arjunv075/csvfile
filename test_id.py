@@ -1,27 +1,15 @@
 import os
-import csv
-import pytest
-from id import generate_vcard
+from id import read_csv, generate_vcard_template, generate_vcard
 
+def test_read_csv(tmpdir):
+    csv_file = tmpdir.join("test_names.csv")
+    csv_file.write("noel,john,Developer,noel@example.com,123-4")
+    assert read_csv(csv_file) == [["noel", "john", "Developer", "noel@example.com", "123-4"]]
 
-@pytest.fixture
-def sample_data():
-    return [
-        ("noel", "john", "accountant", "noel.john@example.com", "1234"),
-    ]
+def test_generate_vcard_template():
+    assert generate_vcard_template("noel", "john", "Developer", "noel@example.com", "123-4")
 
-
-def test_generate_vcard(tmp_path, sample_data):
-    output_directory = tmp_path / "vcf_files"
-    output_directory.mkdir()
-
-    for entry in sample_data:
-        first_name, last_name, title, email, phone = entry
-        vcard = generate_vcard(first_name, last_name, title, email, phone)
-        file_name = f"{email.lower()}_card.vcf"
-        file_path = output_directory / file_name
-
-        with open(file_path, "w") as vcard_file:
-            vcard_file.write(vcard)
-
-        assert file_path.is_file()
+def test_generate_vcard(tmpdir):
+    output_directory = tmpdir.join("test_vcf_files")
+    generate_vcard([["noel", "john", "Developer", "noel@example.com", "123-4"]], output_directory)
+    assert len(os.listdir(output_directory)) == 1

@@ -1,9 +1,17 @@
 import csv
-
 import os
 
 
-def generate_vcard(fname, lname, title, email, phone):
+def read_csv(file_path):
+    data = []
+    with open(file_path, "r") as csvfile:
+        reader = csv.reader(csvfile)
+        for row in reader:
+            data.append(row)
+    return data
+
+
+def generate_vcard_template(fname, lname, title, email, phone):
     vcard_template = f"""
 BEGIN:VCARD
 VERSION:2.1
@@ -20,18 +28,30 @@ END:VCARD
     return vcard_template.strip()
 
 
-with open("names.csv", "r") as csvfile:
-    reader = csv.reader(csvfile)
-    data = [tuple(row) for row in reader]
+def generate_vcard(data, output_directory):
+    os.makedirs(output_directory, exist_ok=True)
 
-output_directory = "/home/arjun/gensheet/vcf_files"
+    for entry in data:
+        first_name, last_name, title, email, phone = entry
+        vcard = generate_vcard_template(first_name, last_name, title, email, phone)
 
-for entry in data:
-    first_name, last_name, title, email, phone = entry
-    vcard = generate_vcard(first_name, last_name, title, email, phone)
-    os.chdir(output_directory)
-    file_name = f"{email.lower()}_card.vcf"
-    with open(file_name, "w") as vcard_file:
-        vcard_file.write(vcard)
+        file_name = f"{email.lower()}_card.vcf"
+        file_path = os.path.join(output_directory, file_name)
 
-    print(f"Generated {file_name}")
+        with open(file_path, "w") as vcard_file:
+            vcard_file.write(vcard)
+
+    print("created vcard files")
+
+
+def main():
+    csv_file_path = "names.csv"
+    output_directory = "./vcf_files"
+
+    data = read_csv(csv_file_path)
+
+    generate_vcard(data, output_directory)
+
+
+if __name__ == "__main__":
+    main()
