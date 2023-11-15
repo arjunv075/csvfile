@@ -1,17 +1,18 @@
-# Script Specification
+# Script Name
+id.py
 
-# Purpose
-Purpose: 
-  This Python code generates VCF files from a CSV file containing details.
+# Description
+-This Python script generates vCard files and corresponding QR codes from a CSV input.
 
 # Input
-Input:
+ Input:
   - CSV file: "names.csv"
     - Format: Each row represents a person's information - first name, last name, title, email, and phone.
 
 # Output
 Output:
   - VCF files are generated for each person in the CSV.
+  - log files are also generated for each entry
 
 # VCard Format
 VCard Format:
@@ -27,12 +28,23 @@ EMAIL;PREF;INTERNET:{email}
 REV:20150922T195243Z
 END:VCARD
 
-# Execution
-Execution:
-  1. Reads data from "names.csv".
-  2. Generates a VCard for each person.
-  3. Writes VCF files to the output directory.
-
 # File Naming
 File Naming:
   - Each VCF file is named in lower case of email.
+
+# Functionality
+- Reads data from a CSV file specified as a command-line argument.
+- Generates vCard files and QR codes based on the input data.
+- Logs detailed information, including a run log file.
+
+# Dependencies
+- argparse (for command-line argument parsing)
+- logging (for logging information)
+- csv (for reading CSV files)
+- os (for file and directory operations)
+- requests (for making HTTP requests to generate QR codes)
+
+# Usage
+- Run the script by providing the input CSV file as a positional argument.
+- Use the optional `-v` or `--verbose` flag for detailed logging.
+
