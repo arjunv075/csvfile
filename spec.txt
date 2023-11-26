@@ -3,6 +3,7 @@ vcf.py
 
 # Description
 -This Python script generates vCard files and corresponding QR codes from a CSV input.
+-This script also enable to enter leaves for the employees and generates a csv file for the same.
 
 # Input
  Input:
@@ -13,6 +14,7 @@ vcf.py
 Output:
   - VCF files are generated for each person in the CSV.
   - log files are also generated for each entry
+  - vcf file of leaves are generated.
 
 # VCard Format
 VCard Format:
@@ -36,6 +38,7 @@ File Naming:
 - Reads data from a CSV file specified as a command-line argument.
 - Generates vCard files and QR codes based on the input data.
 - Logs detailed information, including a run log file.
+- input leaves and generated vcf file.
 
 # Dependencies
 - argparse (for command-line argument parsing)
