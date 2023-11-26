@@ -1,5 +1,5 @@
 # Script Name
-id.py
+vcf.py
 
 # Description
 -This Python script generates vCard files and corresponding QR codes from a CSV input.

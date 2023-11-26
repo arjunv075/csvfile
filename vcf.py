@@ -18,8 +18,8 @@ def parse_args():
         "--verbose",
         help="Print detailed logging",
         action="store_true",
-        default=False,
-    )
+        default=False,              
+    )   
     parser.add_argument(
         "-n",
         "--number",
