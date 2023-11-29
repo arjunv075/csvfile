@@ -4,7 +4,6 @@ import configparser
 import logging
 import os
 import sys
-
 import psycopg2 as pg
 import requests
 
