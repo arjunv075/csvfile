@@ -75,7 +75,8 @@ To get started with the HR Management System, follow the instructions below:
 
 	Generate a CSV file with details of employees' leaves:
 
-	bash
+	bash.
 
 	python hr_management.py retrieve_csv -f <filename>
+	
 
