@@ -4,7 +4,6 @@ CREATE TABLE leaves (serial_number SERIAL PRIMARY KEY,date DATE NOT NULL,employe
 
 CREATE TABLE designation (id SERIAL,designation VARCHAR(150) PRIMARY KEY,num_of_leaves INTEGER,UNIQUE (id,designation));
 
-
 INSERT INTO designation (designation,num_of_leaves) VALUES ('Staff Engineer',20);
 INSERT INTO designation (designation,num_of_leaves) VALUES ('Senior Engineer',18);
 INSERT INTO designation (designation,num_of_leaves) VALUES ('Junior Engineer',12);

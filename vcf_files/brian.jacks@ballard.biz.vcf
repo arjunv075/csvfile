@@ -1,0 +1,12 @@
+
+BEGIN:VCARD
+VERSION:2.1
+N:Jackson;Briana
+FN:Briana Jackson
+ORG:Authors, Inc.
+TITLE:Staff Engineer
+TEL;WORK;VOICE:+1-416-470-0370x187
+ADR;WORK:;;100 Flat Grape Dr.;Fresno;CA;95555;United States of America
+EMAIL;PREF;INTERNET:brian.jacks@ballard.biz
+REV:20150922T195243Z
+END:VCARD

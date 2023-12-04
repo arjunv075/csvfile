@@ -1,0 +1,12 @@
+
+BEGIN:VCARD
+VERSION:2.1
+N:Rowe;Anne
+FN:Anne Rowe
+ORG:Authors, Inc.
+TITLE:Staff Engineer
+TEL;WORK;VOICE:(468)410-0307
+ADR;WORK:;;100 Flat Grape Dr.;Fresno;CA;95555;United States of America
+EMAIL;PREF;INTERNET:anne.rowe@nicholson-brown.net
+REV:20150922T195243Z
+END:VCARD

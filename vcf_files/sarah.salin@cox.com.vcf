@@ -1,0 +1,12 @@
+
+BEGIN:VCARD
+VERSION:2.1
+N:Salinas;Sarah
+FN:Sarah Salinas
+ORG:Authors, Inc.
+TITLE:Staff Engineer
+TEL;WORK;VOICE:7776491028
+ADR;WORK:;;100 Flat Grape Dr.;Fresno;CA;95555;United States of America
+EMAIL;PREF;INTERNET:sarah.salin@cox.com
+REV:20150922T195243Z
+END:VCARD

@@ -1,0 +1,12 @@
+
+BEGIN:VCARD
+VERSION:2.1
+N:Nash;Steven
+FN:Steven Nash
+ORG:Authors, Inc.
+TITLE:Presenter, broadcasting
+TEL;WORK;VOICE:4095981999
+ADR;WORK:;;100 Flat Grape Dr.;Fresno;CA;95555;United States of America
+EMAIL;PREF;INTERNET:steve.nash@hale.info
+REV:20150922T195243Z
+END:VCARD
