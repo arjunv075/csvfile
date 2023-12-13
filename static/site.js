@@ -29,7 +29,7 @@ function gotEmployees(data) {
     </tr>
   </table>
       <h1> Enter leave data for user </h1>
-<form action = /addleave/${data.employee_id} method="post">
+<form action = /leave/${data.employee_id} onsubmit="showAlert()" method="post">
   <label for="date">Date:</label>
   <input type="date" name="date" required>
   <br>
@@ -42,6 +42,10 @@ function gotEmployees(data) {
 
 
 
+}
+
+function showAlert() {
+  alert("Leave Submitted Successfully")
 }
 
 $(function() {

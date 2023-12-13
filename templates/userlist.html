@@ -9,7 +9,7 @@
     <p>
       <ol>
         {%for u in users %}
-        <li>  <a class="userlink" href="{{url_for('employee_details', empid=u.empid)}}">{{u.firstname}} {{u.lastname}}</a></li>
+        <li>  <a class="userlink" href="{{url_for('employee_details', empid=u.empid)}}">{{u.firstname}} {{u.lastname}}</a></li><br>
         {%endfor%}
       </ol>
     </p>
