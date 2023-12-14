@@ -18,7 +18,14 @@ def index():
 def employees():
     employees = db.select(models.Employee).order_by(models.Employee.firstname)
     users = db.session.execute(employees).scalars()
-    return flask.render_template("userlist.html", users = users)
+    ret ={}
+    for user in users:
+       ret[user.empid]= {"firstname" : user.firstname,
+                      "lastname" : user.lastname,
+                      "title" : user.title.title,
+                      "email" : user.email,
+                      "phone" : user.ph_no}
+    return flask.jsonify(ret)
 
   
 @app.route("/employees/<int:empid>")
