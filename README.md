@@ -33,7 +33,7 @@ To get started with the HR Management System, follow the instructions below:
 
 	bash
 
-	python hr_management.py initdb
+	python vcf.py initdb
 
 	Import Employee Data
 
@@ -41,7 +41,7 @@ To get started with the HR Management System, follow the instructions below:
 
 	bash
 
-	python hr_management.py import <csv-file-path>
+	python vcf.py import names.csv
 
 	Retrieve Employee Information
 
@@ -49,7 +49,7 @@ To get started with the HR Management System, follow the instructions below:
 
 	bash
 
-	python hr_management.py retrieve <employee-id>
+	python vcf.py retrieve <employee-id>
 
 	Generate vCards
 
@@ -57,7 +57,7 @@ To get started with the HR Management System, follow the instructions below:
 
 	bash
 
-	python hr_management.py genvcard -n <number-of-records>
+	python vcf.py genvcard -n <number-of-records>
 
 	Manage Leaves
 
@@ -65,18 +65,18 @@ To get started with the HR Management System, follow the instructions below:
 
 	bash
 
-	python hr_management.py initleave <date> <employee-id> <reason>
+	python vcf.py initleave <date> <employee-id> <reason>
 
 	Retrieve leave information for an employee:
 
 	bash
 
-	python hr_management.py retrieve_leave <employee-id>
+	python vcf.py retrieve_leave <employee-id>
 
 	Generate a CSV file with details of employees' leaves:
 
 	bash.
 
-	python hr_management.py retrieve_csv -f <filename>
+	python vcf.py retrieve_csv -f <filename>
 	
 
